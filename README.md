@@ -39,3 +39,21 @@ Proje sayımız ilerledikçe proje yönetimimizi kolaylaştırmak adına projele
   " French and Italian forces evacuated from Anatolia. The Allies offered an armistice to the Turks, which Mustafa Kemal refused.";
 * WordCounter sınıfı içerisinde static ```calculateWord``` adında bir method tanımlamalısın. Tüm işlemleri bu method içerisinde yapmalasın.
 * Method dönüş tipi olarak ```Map<String,Integer>``` tipinde bir dönüşe sahip olmalı. Map içerisinde key kısmı, textin içerisindeki her bir kelimeye denk gelmeli. Value kısmı bu kelimenin toplamda kaç kez tekrar ettiğini tutmalı.
+
+
+### ⚠️ Skorun NextGen'e Kaydedilmediyse
+
+Eğer testleri çalıştırdığın halde skorun NextGen'e kaydedilmediyse, önce fork'unun güncel olup olmadığını kontrol et:
+
+1. GitHub reponu aç.
+2. Repo **X commit ahead** ve **X commits behind** şeklinde bir uyarı gösteriyorsa, branch'in güncel değildir.
+3. **Sync fork → Update branch** adımlarını uygula.
+4. Ardından localinde şu komutu çalıştır:
+
+```bash
+   git pull
+```
+
+5. Testleri tekrar çalıştır. Bu adımdan sonra skorun güncellenmiş olacaktır.
+
+> **Not:** Bu kontrolü yapmadan tekrar tekrar test çalıştırmak sorunu çözmez; sorunun kaynağı genellikle fork'un upstream repository ile senkron olmamasıdır.
